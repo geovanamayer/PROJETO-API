@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color:background: rgb(42,36,107);
+  background: linear-gradient(90deg, rgba(26, 22, 71, 0.762) 0%, rgb(23, 23, 78) 33%, rgb(2, 2, 47) 62%);
+  --secondary-color: #18053c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: rgb(251, 242, 255);
+}
+
+.search::placeholder {
+  color: #ebecf0;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(31, 0, 170, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: rgb(202, 3, 3);
+}
+
+.movie-info span.red {
+  color: rgb(255, 254, 254);
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.icon1{
+margin-left: 50px;
+
+
+}
+.icon2{
+  margin-left: 5px;
+  margin-right:500px;
+ 
+}
+
+.name{
+  font-size: 30px;
+  font-family: 'Crete Round', serif;
+  color:#fff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em
+}
+
+/* neo light css */
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(222, 133, 231),
+      0 0 80px rgb(221, 112, 229),
+      0 0 90px rgb(212, 127, 212),
+      0 0 100px rgb(178, 81, 223),
+      0 0 150px rgb(156, 63, 172);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+h1 {
+  font-family: 'Crete Round', serif;
+  color:#fff;
+  margin-left: 600px;
+  margin-right: 600px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.container {
+  margin-top: 20vh;
+}
